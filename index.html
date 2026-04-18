@@ -71,6 +71,137 @@
             line-height: 1.8;
             color: #444444;
         }
+        #skills {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    }
+
+    .skills-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .skills-container h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #222222;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        text-align: left;
+    }
+
+    .skill-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px 25px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .skill-card h3 {
+        font-size: 16px;
+        color: #555555;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #f4f4f4;
+        padding-bottom: 8px;
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .skill-tags span {
+        background-color: #f0f0f0;
+        color: #333333;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    #projects {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    }
+
+    .projects-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .projects-container h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #222222;
+        text-align: center;
+    }
+
+    .project-card {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+        color: #222222;
+        margin-bottom: 10px;
+    }
+
+    .project-card p {
+        font-size: 16px;
+        color: #444444;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .project-tags span {
+        background-color: #222222;
+        color: #ffffff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+    }
+
+    .project-screenshots {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .project-screenshots img {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #dddddd;
+    }
+
+    .project-screenshots .caption {
+        font-size: 13px;
+        color: #777777;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .screenshot-item {
+        display: flex;
+        flex-direction: column;
+    }
     </style>
 </head>
 
@@ -89,6 +220,126 @@
             <h2>About Me</h2>
             <p>I'm an entry-level IT professional based in West Springfield Massachusetts with CompTIA A+, Network+, and Security+ certifications. I'm passionate about cybersecurity and building toward a career in SOC work. Outside of my job, I spend most of my time in home labs — setting up Active Directory environments, SIEM monitoring with Wazuh, and exploring how real attacks work. I'm always looking to connect with IT professionals and recruiters in the field.</p>
         </div>
-</section>
+    </section>
+    <section id="skills">
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Certifications</h3>
+                    <div class="skill-tags">
+                        <span>CompTIA A+</span>
+                        <span>CompTIA Network+</span>
+                        <span>CompTIA Security+</span>
+                        <span>Secure Infrastructure Specialist</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Operating Systems</h3>
+                    <div class="skill-tags">
+                        <span>Windows</span>
+                        <span>Ubuntu Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span>Wazuh SIEM</span>
+                        <span>VirtualBox</span>
+                        <span>osTicket</span>
+                        <span>XAMPP</span>
+                        <span>Apache</span>
+                        <span>MySQL</span>
+                        <span>phpMyAdmin</span>
+                        <span>SSH</span>
+                        <span>VNC</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Networking</h3>
+                    <div class="skill-tags">
+                        <span>TCP/IP</span>
+                        <span>DNS</span>
+                        <span>DHCP</span>
+                        <span>NAT</span>
+                        <span>Static IP</span>
+                        <span>Subnetting</span>
+                        <span>Port Forwarding</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Security</h3>
+                    <div class="skill-tags">
+                        <span>SIEM</span>
+                        <span>Log Monitoring</span>
+                        <span>Firewall Troubleshooting</span>
+                        <span>RBAC</span>
+                        <span>Access Permissions</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>IT Support</h3>
+                    <div class="skill-tags">
+                        <span>Ticketing Systems</span>
+                        <span>Issue Documentation</span>
+                        <span>Escalation</span>
+                        <span>POS/Kiosk Troubleshooting</span>
+                        <span>Customer Communication</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Other</h3>
+                    <div class="skill-tags">
+                        <span>Python (Basic)</span>
+                        <span>HTML/CSS/JavaScript (Basic)</span>
+                        <span>Microsoft Office</span>
+                        <span>Google Workspace</span>
+                        <span>ECLIPSE WMS</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects-container">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Active Directory Home Lab</h3>
+                <p>Built a Windows Server home lab simulating a small business environment. Promoted the server to a domain controller, created the lab.local domain, configured OUs, user accounts, and a HelpDesk security group. Joined a Windows 10 Pro client to the domain and troubleshot a one-way firewall connectivity issue between the server and client.</p>
+                <div class="project-tags">
+                    <span>Windows Server</span>
+                    <span>Active Directory</span>
+                    <span>DNS</span>
+                    <span>VirtualBox</span>
+                    <span>Windows Defender Firewall</span>
+                </div>
+                <div class="project-screenshots">
+                    <div class="screenshot-item">
+                        <img src="pictures\Screenshot 2026-04-10 003947.png" alt="Active Directory Users and Computers">
+                        <p class="caption">AD Users and Computers — lab.local domain with OUs, users, and HelpDesk group</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="pictures\Screenshot 2026-04-10 013008 (1).png" alt="Client joined to domain">
+                        <p class="caption">Client1 successfully joined to lab.local domain</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="pictures\Screenshot 2026-04-10 011545.png" alt="Firewall fix and successful ping">
+                        <p class="caption">Firewall rule enabled — bidirectional ping restored</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>
