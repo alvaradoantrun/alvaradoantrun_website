@@ -9,32 +9,36 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
         .hero {
             position: relative;
             width: 100%;
-            height: 400px;
+            margin: 0 auto;
             overflow: hidden;
+            height: 700px;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
             display: block;
+            object-fit: cover;
+            object-position: center 70%;
         }
 
         .hero-text {
             position: absolute;
             top: 40px;
-            left: 50px;
+            left: 50%;
+            transform: translateX(-50%);
             color: white;
             background-color: rgba(0, 0, 0, 0.55);
             padding: 20px 30px;
             border-radius: 10px;
-        }
+            text-align: center;
+}
 
         .hero-text h1 {
             margin: 0;
@@ -44,6 +48,28 @@
         .hero-text p {
             margin-top: 10px;
             font-size: 20px;
+        }
+        #about {
+            background-color: #ffffff;
+            padding: 60px 20px;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #222222;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444444;
         }
     </style>
 </head>
@@ -58,6 +84,11 @@
             <p>Entry-Level IT Support | CompTIA A+, Network+, Security+</p>
         </div>
     </section>
-
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p>I'm an entry-level IT professional based in West Springfield Massachusetts with CompTIA A+, Network+, and Security+ certifications. I'm passionate about cybersecurity and building toward a career in SOC work. Outside of my job, I spend most of my time in home labs — setting up Active Directory environments, SIEM monitoring with Wazuh, and exploring how real attacks work. I'm always looking to connect with IT professionals and recruiters in the field.</p>
+        </div>
+</section>
 </body>
 </html>
