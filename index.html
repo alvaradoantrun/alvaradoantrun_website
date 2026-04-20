@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antrun Alvarado</title>
 
-    <link rel="icon" type="image/jpeg" href="pictures\faviacon\favacon3.jpg">
+    <link rel="icon" type="image/jpeg" href="pictures\favicon\favacon3.jpg">
 
     <style>
     body {
@@ -292,6 +292,21 @@
     .nav-links a:hover {
         color: #ffffff;
     }
+    .github-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0969da;
+    background-color: #222222;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    }
+
+    .github-link:hover {
+        background-color: #444444;
+    }
     </style>
 </head>
 
@@ -418,6 +433,7 @@
             <div class="project-card">
                 <h3>Active Directory Home Lab</h3>
                 <p>Built a Windows Server home lab simulating a small business environment. Promoted the server to a domain controller, created the lab.local domain, configured OUs, user accounts, and a HelpDesk security group. Joined a Windows 10 Pro client to the domain and troubleshot a one-way firewall connectivity issue between the server and client.</p>
+                <a href="https://github.com/alvaradoantrun/active-directory-home-lab" target="_blank" class="github-link">View on GitHub</a>
                 <div class="project-tags">
                     <span>Windows Server</span>
                     <span>Active Directory</span>
@@ -445,6 +461,7 @@
         <div class="project-card">
             <h3>osTicket Help Desk Lab</h3>
             <p>Deployed a local osTicket help desk environment on Windows using XAMPP, Apache, PHP, and MySQL. Configured departments, roles, and agents to simulate a small support team. Practiced a full ticket lifecycle — from creation and routing to resolution and closure — using a realistic password reset scenario.</p>
+            <a href="https://github.com/alvaradoantrun/osticket-lab" target="_blank" class="github-link">View on GitHub</a>
             <div class="project-tags">
                 <span>osTicket</span>
                 <span>XAMPP</span>
@@ -454,6 +471,8 @@
                 <span>Windows</span>
                 <span>Help Desk</span>
             </div>
+
+
             <div class="project-screenshots">
                 <div class="screenshot-item">
                     <img src="pictures\project-2\Screenshot 2026-04-07 173555.png" alt="osTicket Agents">
@@ -473,7 +492,125 @@
                 </div>
             </div>
         </div>
+
+        <div class="project-card">
+            <h3>Wazuh SIEM Lab</h3>
+            <p>Deployed a Wazuh SIEM environment on an Ubuntu Linux VM and connected a Raspberry Pi as an endpoint agent. Configured port forwarding and firewall rules to establish communication between the agent and manager. Successfully enrolled the Pi, verified the agent connection, and used the Wazuh dashboard to monitor authentication failure events and SSH activity in real time.</p>
+            <div class="project-tags">
+                <span>Wazuh</span>
+                <span>SIEM</span>
+                <span>Ubuntu Linux</span>
+                <span>Raspberry Pi</span>
+                <span>Log Monitoring</span>
+                <span>VirtualBox</span>
+                <span>Port Forwarding</span>
+                <span>SSH</span>
+            </div>
+            <div class="project-screenshots">
+                <div class="screenshot-item">
+                    <img src="pictures\project-4\Screenshot 2026-03-25 161004.png" alt="Wazuh agent running on Raspberry Pi">
+                    <p class="caption">Raspberry Pi — wazuh-agent service active and running successfully</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-4\Screenshot 2026-03-25 162051.png" alt="Wazuh dashboard">
+                    <p class="caption">Wazuh dashboard — 10 authentication failure events detected from the Pi endpoint</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-4\Screenshot 2026-03-25 162106.png" alt="Wazuh events log">
+                    <p class="caption">Event log — SSH authentication failures and PAM login events from raspberrypi agent</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-4\Screenshot 2026-03-24 192715.png" alt="Port forwarding rules">
+                    <p class="caption">Port forwarding rules — configured to allow agent-manager communication on ports 1514 and 1515</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <h3>Windows DNS Troubleshooting Lab</h3>
+            <p>Built a Windows VM lab to simulate and diagnose a real-world DNS misconfiguration. The VM could ping IP addresses but could not resolve domain names. Used ping and nslookup to identify the issue as a misconfigured DNS server setting, corrected the TCP/IPv4 settings, and restored full connectivity.</p>
+            <div class="project-tags">
+                <span>Windows</span>
+                <span>DNS</span>
+                <span>TCP/IP</span>
+                <span>VirtualBox</span>
+                <span>CMD</span>
+                <span>nslookup</span>
+            </div>
+            <div class="project-screenshots">
+                <div class="screenshot-item">
+                    <img src="pictures\project-3\Screenshot 2026-03-26 204916.png" alt="DNS broken state">
+                    <p class="caption">Broken state — ping 8.8.8.8 succeeds but nslookup google.com fails</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-3\Screenshot 2026-03-26 204144.png" alt="Ethernet Properties">
+                    <p class="caption">TCP/IPv4 settings — where the DNS misconfiguration was identified and corrected</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-3\Screenshot 2026-03-26 205426.png" alt="DNS fixed">
+                    <p class="caption">Fixed — ping google.com resolving successfully after DNS correction</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <h3>Remote IP Camera System with Tailscale & go2rtc</h3>
+            <p>Built a self-hosted remote camera system using a Raspberry Pi, go2rtc, and Tailscale. Scanned the network to locate an IP camera, pulled its raw RTSP stream, and set up go2rtc on the Pi to relay the feed. Installed Tailscale to create a private VPN tunnel, allowing secure remote access to the camera stream from a phone without any port forwarding or third-party cloud services.</p>
+            <div class="project-tags">
+                <span>Raspberry Pi</span>
+                <span>Tailscale</span>
+                <span>go2rtc</span>
+                <span>RTSP</span>
+                <span>Linux</span>
+                <span>VPN</span>
+                <span>Networking</span>
+            </div>
+            <div class="project-screenshots">
+            <div class="screenshot-item">
+                <img src="pictures\project-6\Screenshot from 2026-04-20 19-01-35.png" alt="Tailscale dashboard">
+                <p class="caption">Tailscale dashboard — Raspberry Pi and phone connected to private tailnet</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="pictures\project-6\Screenshot from 2026-04-20 19-01-08 (2).png" alt="go2rtc running on Pi">
+                <p class="caption">go2rtc running on the Pi via VNC — listening on Tailscale IP 100.116.224.7</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="pictures\project-6\Screenshot_20260420-190224.Chrome - Copy.png" alt="go2rtc accessed from phone">
+                <p class="caption">go2rtc web UI accessed remotely from phone over Tailscale VPN</p>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <h3>OWASP Juice Shop on Raspberry Pi</h3>
+            <p>Deployed the OWASP Juice Shop intentionally vulnerable web application on a Raspberry Pi using Docker. Installed Docker on Raspberry Pi OS, verified the installation with a hello-world container, pulled the Juice Shop image, and ran it as a container on port 3000. Used the app as a hands-on environment to explore web application vulnerabilities.</p>
+            <div class="project-tags">
+                <span>Docker</span>
+                <span>Raspberry Pi</span>
+                <span>OWASP Juice Shop</span>
+                <span>Linux</span>
+                <span>Web Application Security</span>
+            </div>
+            <div class="project-screenshots">
+                <div class="screenshot-item">
+                    <img src="pictures\project-5\Screenshot 2026-03-25 171613.png" alt="Docker installed on Raspberry Pi">
+                    <p class="caption">Docker installed on Raspberry Pi — hello-world container confirmed working</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-5\Screenshot 2026-03-25 175623.png" alt="Juice Shop container running">
+                    <p class="caption">Juice Shop container pulled and running on port 3000</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="pictures\project-5\Screenshot 2026-04-20 172741.png" alt="Juice Shop in browser">
+                    <p class="caption">OWASP Juice Shop live in browser — accessible at 10.0.0.44:3000</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
