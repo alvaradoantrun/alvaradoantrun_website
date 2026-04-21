@@ -239,12 +239,15 @@
         color: #ffffff;
         text-decoration: none;
         font-size: 16px;
-        border: 1px solid #ffffff;
+        background-color: #0969da;
         padding: 10px 20px;
         border-radius: 25px;
         transition: background-color 0.3s;
     }
 
+.contact-links a:hover {
+    background-color: #0550ae;
+}
     .contact-links a:hover {
         background-color: #ffffff;
         color: #222222;
@@ -320,6 +323,19 @@
 
     .resume-btn:hover {
         background-color: #0550ae;
+    }
+    @media (max-width: 768px) {
+        .resume-btn {
+            display: none;
+        }
+
+        .nav-links {
+            gap: 15px;
+        }
+
+        .nav-logo {
+            font-size: 16px;
+        }
     }
     </style>
 </head>
@@ -638,6 +654,7 @@
             <a href="mailto:alvaradoantrun@gmail.com">Email Me</a>
             <a href="https://linkedin.com/in/antrun-alvarado-2a4a4b363" target="_blank">LinkedIn</a>
             <a href="https://github.com/alvaradoantrun" target="_blank">GitHub</a>
+            <a href="Antrun_Alvarado_Resume.pdf" download>Download Resume</a>
         </div>
     </section>
 </body>
